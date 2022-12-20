@@ -20,63 +20,63 @@ export const foods = [
     {
         id: 1,
         name: 'Mushi',
-        img: '',
+        img: images.plat__1,
         description: 'Sushi is a traditional Japanese dish.',
         category: 'dinner',
     },
     {
         id: 2,
         name: 'Bushi',
-        img: '',
+        img: images.plat__2,
         description: 'Sushi is a traditional Japanese dish.',
         category: 'breakfast',
     },
     {
         id: 3,
         name: 'Sushi',
-        img: '',
+        img: images.plat__2,
         description: 'Sushi is a traditional Japanese dish.',
         category: 'dinner',
     },
     {
         id: 4,
         name: 'Nushi',
-        img: '',
+        img: images.plat__3,
         description: 'Sushi is a traditional Japanese dish.',
         category: 'lunch',
     },
     {
         id: 5,
         name: 'Cushi',
-        img: '',
+        img: images.plat__3,
         description: 'Sushi is a traditional Japanese dish.',
         category: 'lunch',
     },
     {
         id: 6,
         name: 'Dal',
-        img: '',
+        img: images.plat__4,
         description: 'The most common way of preparing dal.',
         category: 'dinner'
     },
     {
         id: 7,
         name: 'Pierogi',
-        img: '',
+        img: images.plat__4,
         description: 'Pierogi are filled dumplings.',
         category: 'breakfast'
     },
     {
         id: 8,
         name: 'Shish kebab',
-        img: '',
+        img: images.plat__5,
         description: 'Shish kebab is a popular meal.',
         category: 'dinner'
     },
     {
         id: 9,
         name: 'Dim sum',
-        img: '',
+        img: images.plat__5,
         description: 'Dim sum is a large range of small dishes.',
         category: 'lunch'
     }

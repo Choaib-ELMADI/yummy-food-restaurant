@@ -19,17 +19,6 @@ const SearchBar = () => {
           onChange={ e => setQuery(e.target.value) }
         />
       </div>
-      {/* <div className='btns'>
-        {
-          ['Breakfast', 'Lunch', 'Dinner'].map(elt => (
-            <button
-              key={ elt }
-              className='btn'
-              onClick={ setItems(items.filter(item => item.category === elt.toLowerCase() )) }
-            >{ elt }</button>
-          ))
-        }
-      </div> */}
       <MenuItems items={ results }/>
     </div>
   )
