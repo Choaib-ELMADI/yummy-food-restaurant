@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCartPlus } from 'react-icons/fa';
 import { RiMoneyPoundCircleFill } from 'react-icons/ri';
-import { MdOutlineFavoriteBorder } from 'react-icons/md';
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 
 const MenuItems = ({ items }) => {
   return (
@@ -11,7 +11,8 @@ const MenuItems = ({ items }) => {
           <div key={ item.id } className='menu__item'>
             <div className='img__container'>
               <button className='heart'>
-                <MdOutlineFavoriteBorder className='inner__heart' />
+                <AiOutlineHeart className='outline__heart' />
+                <AiFillHeart className='fill__heart' />
               </button>
               <div className="overlay" />
               <img 
