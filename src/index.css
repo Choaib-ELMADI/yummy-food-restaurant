@@ -32,7 +32,7 @@
 }
 
 .search {
-    width: 40%;
+    width: 650px;
     margin: 0 auto;
     display: grid;
     place-items: center;
@@ -149,7 +149,7 @@
     top: 5px;
     right: 5px;
     font-size: 20px;
-    background: rgba(0, 0, 0, 0.8);
+    background: transparent;
     border: 0;
     outline: none;
     color: red;
