@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { foods, filterItems } from '../data.js';
 import MenuItems from './MenuItems';
+import './SearchBar.css';
 
 
 
@@ -14,7 +15,7 @@ const SearchBar = () => {
       <div className='search'>
         <input
           className='search__input'
-          placeholder='Search Items ...'
+          placeholder='Search Plat ...'
           value={ query }
           onChange={ e => setQuery(e.target.value) }
         />

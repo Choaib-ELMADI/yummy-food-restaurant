@@ -1,23 +1,77 @@
-import chef     from '../assets/chef.jpg';
-import glass__1 from '../assets/glass__1.jpg';
-import glass__2 from '../assets/glass__2.jpg';
-import glass__3 from '../assets/glass__3.jpg';
-import knife    from '../assets/knife.jpg';
-import plat__1  from '../assets/plat__1.jpg';
-import plat__2  from '../assets/plat__2.jpg';
-import plat__3  from '../assets/plat__3.jpg';
-import plat__4  from '../assets/plat__4.jpg';
-import plat__5  from '../assets/plat__5.jpg';
+import bastilla__1 from '../assets/bastilla__1.jpg';
+import bastilla__2 from '../assets/bastilla__2.jpg';
+import bastilla__3 from '../assets/bastilla__3.jpg';
+import bastilla__4 from '../assets/bastilla__4.jpg';
+
+import bread__1    from '../assets/bread__1.jpg';
+
+import candy__1    from '../assets/candy__1.jpeg';
+import candy__2    from '../assets/candy__2.jpg';
+import candy__3    from '../assets/candy__3.jpg';
+import candy__4    from '../assets/candy__4.jpg';
+import candy__5    from '../assets/candy__5.jpg';
+import candy__6    from '../assets/candy__6.jpg';
+import candy__7    from '../assets/candy__7.jpg';
+import candy__8    from '../assets/candy__8.jpg';
+import candy__9    from '../assets/candy__9.jpg';
+import candy__10   from '../assets/candy__10.jpg';
+
+import chef        from '../assets/chef.jpg';
+
+import couscous__1 from '../assets/couscous__1.jpeg';
+import couscous__2 from '../assets/couscous__2.jpeg';
+import couscous__3 from '../assets/couscous__3.jpeg';
+import couscous__4 from '../assets/couscous__4.jpeg';
+import couscous__5 from '../assets/couscous__5.jpeg';
+
+import logo__1     from '../assets/logo__1.jpeg';
+import logo__2     from '../assets/logo__2.jpeg';
+import logo__3     from '../assets/logo__3.jpg';
+
+import knife       from '../assets/knife.jpg';
+
+import harira__1   from '../assets/harira__1.jpeg';
+
+import secret__1   from '../assets/secret__1.jpeg';
+import secret__2   from '../assets/secret__2.jpeg';
+import secret__3   from '../assets/secret__3.jpeg';
 
 export default {
+  bastilla__1,
+  bastilla__2,
+  bastilla__3,
+  bastilla__4,
+
+  bread__1,
+
+  candy__1,
+  candy__2,
+  candy__3,
+  candy__4,
+  candy__5,
+  candy__6,
+  candy__7,
+  candy__8,
+  candy__9,
+  candy__10,
+
   chef,
-  glass__1,
-  glass__2,
-  glass__3,
+
+  couscous__1,
+  couscous__2,
+  couscous__3,
+  couscous__4,
+  couscous__5,
+
+  logo__1,
+  logo__2,
+  logo__3,
+
   knife,
-  plat__1,
-  plat__2,
-  plat__3,
-  plat__4,
-  plat__5,
+
+  harira__1,
+
+  secret__1,
+  secret__2,
+  secret__3,
 };

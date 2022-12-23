@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
 import { FaCartPlus } from 'react-icons/fa';
 import { RiMoneyPoundCircleFill } from 'react-icons/ri';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import './Item.css';
 
 
 
 const Item = ({ item }) => {
     const [heart, setHeart] = useState(false);
+    
+    const handleHeartClick = (name) => {
+        setHeart(!heart);
+        { !heart && toast.success(`${ name } added to favourites.`);}
+        { heart && toast.error(`${ name } removed from favourites.`);}
+    }
 
     return (
         <div className='menu__item'>
             <div className='img__container'>
-                <button className='heart' onClick={ () => setHeart(!heart) }>
+                <button className='heart' onClick={ () => handleHeartClick(item.name) }>
                     {
                     heart ? <AiFillHeart key={ item.name } className='fill__heart' /> :
                     <AiOutlineHeart key={ item.name } className='outline__heart' />
@@ -28,7 +36,7 @@ const Item = ({ item }) => {
                 <div className="plat__info">
                     <h1>{ item.name }</h1>
                     <p>{ item.description }</p>
-                    <b>{ item.category }</b>
+                    <b>{ item?.category }</b>
                 </div>
             </div>
             <div className='btns'>

@@ -1,0 +1,8 @@
+.menu__items {
+    width: 650px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

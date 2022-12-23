@@ -1,14 +1,17 @@
 import React from 'react';
+import { Toaster } from 'react-hot-toast';
 
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
-import MenuItems from './components/MenuItems';
+
+
 
 const App = () => {
   return (
     <div className='app'>
         <Navbar />
         <SearchBar />
+        <Toaster />
     </div>
   );
 }
