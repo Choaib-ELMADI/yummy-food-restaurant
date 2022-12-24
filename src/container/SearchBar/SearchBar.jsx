@@ -6,7 +6,7 @@ import './SearchBar.css';
 
 
 
-const SearchBar = () => {
+const SearchBar = ({ FavoratesList }) => {
   const [query, setQuery] = useState('');
   const results = filterItems(foods, query);
 
@@ -20,7 +20,7 @@ const SearchBar = () => {
           onChange={ e => setQuery(e.target.value) }
         />
       </div>
-      <MenuItems items={ results }/>
+      <MenuItems FavoratesList={ FavoratesList } items={ results }/>
     </div>
   )
 }

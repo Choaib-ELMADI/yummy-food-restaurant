@@ -15,6 +15,11 @@
     --handW-1:      'Gochi Hand';
 }
 
+#root {
+    background: var(--dark);
+    color: var(--dark__red);
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -29,13 +34,10 @@
 
 .app {
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: var(--dark);
-    color: var(--dark__red);
 }
 
 @keyframes slide-bottom {

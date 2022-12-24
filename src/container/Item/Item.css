@@ -1,6 +1,7 @@
 .menu__item {
     margin: 18px 4px;
     width: 300px;
+    overflow: hidden;
 }
 
 .img__container {
@@ -37,6 +38,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    gap: 5px;
 }
 .btns .btn {
     display: grid;
@@ -48,6 +50,8 @@
     background: orangered;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    border: 0;
+    outline: none;
 }
 .btns .btn span {
     font-weight: 800;

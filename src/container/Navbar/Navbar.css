@@ -66,15 +66,18 @@
     gap: .75rem;
 }
 
-.app__nav-favourites a {
+.app__nav-favourites button {
     position: relative;
-    text-decoration: none;
     font-size: 18px;
     font-weight: 600;
     color: var(--dark__red);
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
 }
 
-.app__nav-favourites a::after {
+.app__nav-favourites button::after {
     content: '';
     position: absolute;
     left: 0;
@@ -86,7 +89,7 @@
     transition: width 0.3s ease-in-out;
 }
 
-.app__nav-favourites a:hover::after {
+.app__nav-favourites button:hover::after {
     width: 100%;
 }
 
@@ -97,33 +100,46 @@
 }
 
 @media screen and (max-width: 876px) {
+    .app__navigation {
+        padding: 0.5rem 1rem;
+    }
+
+    .app__nav-logo {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
     .app__nav-links {
         display: none;
     }
 
     .open__overlay {
+        display: grid;
+        place-items: center;
         cursor: pointer;
     }
 
     .app__small-nav-overlay {
-        position: absolute;
+        position: fixed;
         background-color: var(--dark);
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 3;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        overflow: hidden;
         animation: slide-bottom .3s linear;
     }
 
     .overlay__close {
         cursor: pointer;
         position: absolute;
-        top: 1rem;
-        right: 2rem;
+        top: .5rem;
+        right: 1rem;
     }
 
     .app__small-nav-links .p_opensans {

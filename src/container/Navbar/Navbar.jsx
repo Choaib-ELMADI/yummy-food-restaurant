@@ -6,7 +6,7 @@ import './Navbar.css';
 
 
 
-const Navbar = () => {
+const Navbar = ({ onSeeResto, onSeeFavorites, close }) => {
   const [smallNav, setSmallNav] = useState(false);
 
   return (
@@ -17,7 +17,11 @@ const Navbar = () => {
         <ul className='app__nav-links'>
           {
             ['Home', 'About', 'Menu', 'Awards', 'Contact'].map(elt => (
-              <li key={ elt } className='p_opensans'>
+              <li 
+                key={ elt } 
+                className='p_opensans'
+                onClick={ close }
+              >
                 <div className='app__point-link' />
                 <a href={ '#' + elt }>{ elt }</a>
               </li>
@@ -25,29 +29,28 @@ const Navbar = () => {
           }
         </ul>        
         <div className="app__nav-favourites">
-          <a href="#Cart">Cart</a>
-          <a href="#Favourites">Favourites</a>
+          <button onClick={ onSeeResto } type="button">Resto</button>
+          <button onClick={ onSeeFavorites } type="button">Favourites</button>
         </div>
         <div className="app__nav-phone">
-          { !smallNav && <GiHamburgerMenu className='open__overlay' fontSize={ 26 } onClick={ () => setSmallNav(!smallNav) } /> }
+          { !smallNav && <GiHamburgerMenu fontSize={ 26 } onClick={ () => setSmallNav(!smallNav) } /> }
           {
             smallNav &&
             <div className='app__small-nav-overlay'>
-              <MdOutlineRestaurantMenu 
-                fontSize={ 30 } 
-                onClick={ () => setSmallNav(!smallNav) }
-                className='overlay__close' 
-              />
+              <MdOutlineRestaurantMenu fontSize={ 26 } onClick={ () => setSmallNav(!smallNav) } className='overlay__close' />
               <ul className='app__small-nav-links'>
               {
                 ['Home', 'About', 'Menu', 'Awards', 'Contact'].map(elt => (
                   <li 
-                    onClick={ () => setSmallNav(!smallNav) } 
                     key={ elt } 
-                    className='p_opensans'
+                    className='p_opensans' 
+                    onClick={ close }
                   >
                     <div className='app__point-link' />
-                    <a href={ '#' + elt }>{ elt }</a>
+                    <a 
+                      onClick={ () => setSmallNav(false) } 
+                      href={ '#' + elt }>{ elt }
+                    </a>
                   </li>
                 ))
               }

@@ -7,3 +7,4 @@ export { default as Item      } from './Item/Item';
 export { default as MenuItems } from './MenuItems/MenuItems';
 export { default as Navbar    } from './Navbar/Navbar';
 export { default as SearchBar } from './SearchBar/SearchBar';
+export { default as Favorites } from './Favorites/Favorites';

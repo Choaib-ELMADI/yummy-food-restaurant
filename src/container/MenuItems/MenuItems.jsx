@@ -5,12 +5,12 @@ import './MenuItems.css';
 
 
 
-const MenuItems = ({ items }) => {
+const MenuItems = ({ items, FavoratesList }) => {
   return (
     <div className='menu__items'>
       {
         items.map(item => (
-          <Item key={ item.id } item={ item } />
+          <Item key={ item.id } item={ item } FavoratesList={ FavoratesList } />
         ))
       }
     </div>

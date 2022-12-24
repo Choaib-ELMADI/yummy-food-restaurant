@@ -1,0 +1,48 @@
+.app__favorites {
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.app__fav {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.app__fav-img {
+    width: 260px;
+    aspect-ratio: 1.5;
+}
+
+.app__fav-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.app__fav-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__fav-btns {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 5px;
+}
+.app__fav-btns button {
+    cursor: pointer;
+    background: var(--brown);
+    padding: .25rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 14px;
+}

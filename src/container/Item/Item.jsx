@@ -8,19 +8,20 @@ import './Item.css';
 
 
 
-const Item = ({ item }) => {
+const Item = ({ item, FavoratesList }) => {
     const [heart, setHeart] = useState(false);
     
-    const handleHeartClick = (name) => {
+    const handleHeartClick = (item) => {
+        FavoratesList(item);
         setHeart(!heart);
-        { !heart && toast.success(`${ name } added to favourites.`);}
-        { heart && toast.error(`${ name } removed from favourites.`);}
+        { !heart && toast.success(`${ item.name } added to favourites.`);}
+        { heart && toast.error(`${ item.name } removed from favourites.`);}
     }
 
     return (
         <div className='menu__item'>
             <div className='img__container'>
-                <button className='heart' onClick={ () => handleHeartClick(item.name) }>
+                <button className='heart' onClick={ () => handleHeartClick(item) }>
                     {
                     heart ? <AiFillHeart key={ item.name } className='fill__heart' /> :
                     <AiOutlineHeart key={ item.name } className='outline__heart' />
