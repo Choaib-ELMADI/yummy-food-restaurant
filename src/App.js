@@ -1,8 +1,7 @@
 import React from 'react';
 import { Toaster } from 'react-hot-toast';
 
-import Navbar from './components/Navbar';
-import SearchBar from './components/SearchBar';
+import { Navbar, Header, About, Gallery, FindUs, Footer } from './container/index';
 
 
 
@@ -10,7 +9,12 @@ const App = () => {
   return (
     <div className='app'>
         <Navbar />
-        <SearchBar />
+        <Header />
+        <About />
+        <Gallery />
+        <FindUs />
+        <Footer />
+        {/* <SearchBar /> */}
         <Toaster />
     </div>
   );

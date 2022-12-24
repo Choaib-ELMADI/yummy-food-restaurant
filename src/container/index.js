@@ -1,0 +1,9 @@
+export { default as About     } from './About/About';
+export { default as Footer    } from './Footer/Footer';
+export { default as Header    } from './Header/Header';
+export { default as FindUs    } from './FindUs/FindUs';
+export { default as Gallery   } from './Gallery/Gallery';
+export { default as Item      } from './Item/Item';
+export { default as MenuItems } from './MenuItems/MenuItems';
+export { default as Navbar    } from './Navbar/Navbar';
+export { default as SearchBar } from './SearchBar/SearchBar';

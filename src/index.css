@@ -1,4 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+:root {
+    --dark:         #070606;
+    --dark__blue:   #001632;
+    --soft__blue:   #1A5175;
+    --soft__yellow: #F4F1C9;
+    --white:        #FEFEFE;
+    --brown:        #605249;
+    --orange:       #F17C12;
+    --dark__orange: #F54E29;
+    --dark__red:    orangered;
+    --mainF:        'Arima';
+    --handW-1:      'Gochi Hand';
+}
 
 ::-webkit-scrollbar {
     display: none;
@@ -8,17 +23,26 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Arima', cursive;
+    font-family: var(--mainF);
+    scroll-behavior: smooth;
 }
 
 .app {
     width: 100%;
     min-height: 100vh;
-    padding: 30px 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: black;
-    color: orangered;
+    background: var(--dark);
+    color: var(--dark__red);
+}
+
+@keyframes slide-bottom {
+    0% {
+        transform: translateY(-25%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

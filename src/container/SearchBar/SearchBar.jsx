@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { foods, filterItems } from '../data.js';
-import MenuItems from './MenuItems';
+import { foods, filterItems } from '../../data.js';
+import MenuItems from '../MenuItems/MenuItems.jsx';
 import './SearchBar.css';
 
 
