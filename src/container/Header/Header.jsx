@@ -16,7 +16,7 @@ const Header = () => {
         <div className="app__header-content">
           <div className='app__header-info'>
             <h1>Delicious Food is Waiting For you</h1>
-            <a href='#Menu'>View Menu <span><AiOutlineArrowRight className='arrow' /></span></a>
+            <a href='#Menu'>View Menu <AiOutlineArrowRight className='arrow' /></a>
             <div className='app__header-info-icons'>
                 <img src={ images.logo__1 } />
                 <img src={ images.logo__2 } />
