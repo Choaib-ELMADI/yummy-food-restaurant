@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 
 import { FaCartPlus } from 'react-icons/fa';
@@ -10,27 +10,40 @@ import './Item.css';
 
 const Item = ({ item, FavoratesList }) => {
     const [heart, setHeart] = useState(false);
+
+    useEffect(() => {
+        const addToFav = localStorage.getItem(`${ item.name }-${ item.id }`);
+        if (addToFav !== null) setHeart(addToFav);
+    }, [])
+
+    // useEffect(() => {
+    //     localStorage.setItem(`${ item.name }-${ item.id }`, !heart);
+    // }, [heart]);
     
     const handleHeartClick = (item) => {
+        const addToFav = localStorage.getItem(`${ item.name }-${ item.id }`);
+        if (addToFav !== null) setHeart(!heart);
+        
         FavoratesList(item);
-        setHeart(!heart);
-        { !heart && toast.success(`${ item.name } added to favourites.`);}
-        { heart && toast.error(`${ item.name } removed from favourites.`);}
+        { heart && toast.success(`${ item.name } added to favourites.`);}
+        { !heart && toast.error(`${ item.name } removed from favourites.`);}
     }
+
+
 
     return (
         <div className='menu__item'>
             <div className='img__container'>
                 <button className='heart' onClick={ () => handleHeartClick(item) }>
                     {
-                    heart ? <AiFillHeart key={ item.name } className='fill__heart' /> :
-                    <AiOutlineHeart key={ item.name } className='outline__heart' />
+                        heart ? <AiFillHeart key={ item.name } className='fill__heart' /> :
+                        <AiOutlineHeart key={ item.name } className='outline__heart' />
                     }
                 </button>
                 <div className="overlay" />
                 <img 
                     className='plat__img'
-                    src={ item.img } 
+                    src={ item.img[0] }
                     alt={ item.name } 
                 />
 

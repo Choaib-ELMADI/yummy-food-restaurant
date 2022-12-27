@@ -1,5 +1,5 @@
 .app__favorites {
-    margin-top: 40px;
+    margin-top: 100px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -8,18 +8,51 @@
     align-items: center;
 }
 
+.empty__fav {
+    color: var(--brown);
+    font-size: 150px;
+    margin-bottom: 30px;
+}
+
+.empty__fav + h1 {
+    color: var(--brown);
+    font-weight: 900;
+    font-size: 30px;
+}
+
 .app__fav {
+    width: 50%;
+    margin: auto;
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     margin-bottom: 2rem;
 }
 
 .app__fav-img {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: .25rem;
     width: 260px;
     aspect-ratio: 1.5;
 }
 
 .app__fav-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.app__fav-small-img {
+    cursor: pointer;
+    width: calc(260px/4);
+    aspect-ratio: 1;
+    padding: 0 2px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.app__fav-small-img img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
 }
@@ -45,4 +78,40 @@
     color: var(--dark);
     font-weight: 600;
     font-size: 14px;
+}
+
+@media screen and (max-width: 876px) {
+    .app__fav {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .app__fav {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: .75rem;
+    }
+
+    .app__fav-img {
+        width: 320px;
+    }
+
+    .app__fav-info {
+        width: 320px;
+    }
+
+    .app__favorites {
+        gap: 1.5rem;
+    }
+
+    .empty__fav {
+        font-size: 120px;
+    }
+
+    .empty__fav + h1 {
+        font-size: 26px;
+    }
 }

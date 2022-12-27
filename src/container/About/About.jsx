@@ -6,7 +6,9 @@ import './About.css';
 
 const About = () => {
   return (
-    <div>About</div>
+    <h1 id='About' className='app__about'>
+      About
+    </h1>
   );
 }
 

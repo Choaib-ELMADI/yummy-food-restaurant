@@ -6,9 +6,9 @@ import './FindUs.css';
 
 const FindUs = () => {
   return (
-    <div>
+    <h1 id='Contact' className='app__findus'>
         FindUs
-    </div>
+    </h1>
   );
 }
 

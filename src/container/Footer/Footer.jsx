@@ -6,7 +6,9 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className='app__footer'>Footer</div>
+    <h1 className='app__footer'>
+      Footer
+    </h1>
   );
 }
 

@@ -1,5 +1,13 @@
 .app__navigation {
-    width: 100%;
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    background: var(--dark);
+    /* background: rgba(0, 0, 0, 0.85); */
+    /* backdrop-filter: blur(4px); */
+    z-index: 999;
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +39,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.p_opensans.active a {
+    color: var(--orange);
+}
+
+.p_opensans.active .app__point-link {
+    opacity: 1;
+    visibility: visible;
 }
 
 .app__point-link {
@@ -142,12 +159,47 @@
         right: 1rem;
     }
 
-    .app__small-nav-links .p_opensans {
-        line-height: 50px;
+    .app__small-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
     }
 
-    .app__small-nav-links .app__point-link {
+    .app__small-nav-links .p_opensans a {
+        position: relative;
+        font-size: 26px;
+        line-height: 50px;
+        transition: all .3s linear;
+    }
+
+    .app__small-nav-links .p_opensans a::before,
+    .app__small-nav-links .p_opensans a::after {
+        position: absolute;
         top: 20px;
-        left: -1rem
+        content: '';
+        width: 55px;
+        transform: scale(0, 1);
+        height: 2px;
+        background: var(--orange);
+        transition: all .3s ease-in-out;
+    }
+
+    .app__small-nav-links .p_opensans a::before {
+        transform-origin: right;
+        left: -60px;
+    }
+
+    .app__small-nav-links .p_opensans a::after {
+        transform-origin: left;
+        right: -60px;
+    }
+
+    .app__small-nav-links .p_opensans a:hover {
+        font-size: 45px;
+    }
+
+    .app__small-nav-links .p_opensans a:hover::before,
+    .app__small-nav-links .p_opensans a:hover::after {
+        transform: scale(1, 1);
     }
 }

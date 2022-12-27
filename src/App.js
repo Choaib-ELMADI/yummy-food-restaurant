@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 
-import { Navbar, Header, About, Gallery, SearchBar, FindUs, Footer, Favorites } from './container/index';
+import { Navbar, Header, About, Gallery, Menu, SearchBar, FindUs, Footer, Favorites } from './container/index';
 
 
 
@@ -70,8 +70,10 @@ const App = () => {
           <>
             <Header />
             <About />
+            <Menu />
             <Gallery />
             <FindUs />
+            <Footer />
           </>
         }
         { seeResto &&
@@ -81,7 +83,6 @@ const App = () => {
           <Favorites setFavorites={ setFavorites } favorites={ favorites } />
         }
         <Toaster />
-        <Footer />
     </div>
   );
 }

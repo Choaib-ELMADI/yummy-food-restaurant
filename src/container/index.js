@@ -2,6 +2,7 @@ export { default as About     } from './About/About';
 export { default as Footer    } from './Footer/Footer';
 export { default as Header    } from './Header/Header';
 export { default as FindUs    } from './FindUs/FindUs';
+export { default as Menu      } from './Menu/Menu';
 export { default as Gallery   } from './Gallery/Gallery';
 export { default as Item      } from './Item/Item';
 export { default as MenuItems } from './MenuItems/MenuItems';

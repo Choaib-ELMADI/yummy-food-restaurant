@@ -6,7 +6,7 @@
     --dark__blue:   #001632;
     --soft__blue:   #1A5175;
     --soft__yellow: #F4F1C9;
-    --white:        #FEFEFE;
+    --white:        #e4e4e4;
     --brown:        #605249;
     --orange:       #F17C12;
     --dark__orange: #F54E29;
@@ -34,6 +34,7 @@
 
 .app {
     width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

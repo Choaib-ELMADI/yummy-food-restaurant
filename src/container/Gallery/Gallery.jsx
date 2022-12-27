@@ -6,7 +6,9 @@ import './Gallery.css';
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <h1 id='Gallery' className='app__gallery'>
+      Gallery
+    </h1>
   );
 }
 

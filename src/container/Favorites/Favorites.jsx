@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { TfiLayoutListThumbAlt } from 'react-icons/tfi';
 
 import './Favorites.css';
+import Favorite from './Favorite';
 
 
 
@@ -8,31 +10,15 @@ const Favorites = ({ favorites, setFavorites }) => {
     return (
         <div className='app__favorites'>
             { 
-                favorites.length < 1 &&
-                <h1>Your Favorites is empty</h1>
+                favorites.length < 1 && 
+                <>
+                    <TfiLayoutListThumbAlt className='empty__fav' />
+                    <h1>Your Favourites is empty</h1>
+                </>
             }
             {
                 favorites.map(fav => (
-                    <div key={ fav.id } className="app__fav">
-                        <div className='app__fav-img'>
-                            <img src={ fav.img } alt={ fav.name } />
-                        </div>
-                        <div className='app__fav-info'>
-                            <h1>{ fav.name }</h1>
-                            <p>{ fav.description }</p>
-                            <div className="app__fav-btns">
-                                { fav?.category && <button type="button">{ fav.category }</button> }
-                                <button 
-                                    type="button"
-                                    onClick={ () => setFavorites(
-                                        favorites.filter(favr => favr.id != fav.id)
-                                    ) }
-                                >
-                                    Remove
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <Favorite fav={ fav } setFavorites={ setFavorites } favorites={ favorites } />
                 ))
             }
         </div>
