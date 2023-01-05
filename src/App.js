@@ -1,23 +1,14 @@
 import React, { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
+import { Routes, Route } from 'react-router-dom';
 
-import { Navbar, Header, About, Gallery, Menu, SearchBar, FindUs, Footer, Favorites } from './container/index';
+import { Navbar, Home, SearchBar, Favorites } from './container/index';
 
 
 
 const App = () => {
-  const [seeResto, setSeeResto] = useState(false);
-  const [seeFavorites, setSeeFavorites] = useState(false);
   const [favorites, setFavorites] = useState([]);
 
-  const ShowResto = () => {
-    setSeeResto(!seeResto);
-    setSeeFavorites(false);
-  }
-  const ShowFavorites = () => {
-    setSeeFavorites(!seeFavorites);
-    setSeeResto(false);
-  }
   const AddFavoratesList = (elt) => {
     if (favorites.length < 1) {
       setFavorites([
@@ -58,30 +49,12 @@ const App = () => {
 
   return (
     <div className='app'>
-        <Navbar 
-          onSeeResto={ () => ShowResto() } 
-          onSeeFavorites={ () => ShowFavorites() }
-          close={ () => {
-            setSeeResto(false);
-            setSeeFavorites(false);
-          } }
-        />
-        { !seeResto && !seeFavorites &&
-          <>
-            <Header />
-            <About />
-            <Menu />
-            <Gallery />
-            <FindUs />
-            <Footer />
-          </>
-        }
-        { seeResto &&
-          <SearchBar FavoratesList={ AddFavoratesList } />
-        }
-        { seeFavorites &&
-          <Favorites setFavorites={ setFavorites } favorites={ favorites } />
-        }
+        <Navbar />
+        <Routes>
+          <Route path="/" element={ <Home /> } />
+          <Route path="SearchBar"  element={ <SearchBar FavoratesList={ AddFavoratesList } /> } />
+          <Route path="Favourites" element={ <Favorites setFavorites={ setFavorites } favorites={ favorites } /> } />
+        </Routes>
         <Toaster />
     </div>
   );

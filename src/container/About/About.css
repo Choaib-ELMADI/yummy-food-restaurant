@@ -8,8 +8,8 @@
 }
 
 .app__about-video {
-    width: 500px;
-    height: 350px;
+    width: 300px;
+    height: 180px;
     position: relative;
     display: grid;
     place-items: center;

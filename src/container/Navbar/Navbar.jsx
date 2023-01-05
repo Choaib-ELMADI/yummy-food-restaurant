@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
 
@@ -6,7 +7,7 @@ import './Navbar.css';
 
 
 
-const Navbar = ({ onSeeResto, onSeeFavorites, close }) => {
+const Navbar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [smallNav, setSmallNav] = useState(false);
 
@@ -22,21 +23,21 @@ const Navbar = ({ onSeeResto, onSeeFavorites, close }) => {
               <li 
                 key={ elt }
                 className={ (activeIndex === index) ? "p_opensans active" : "p_opensans" }
-                onClick={ () => {
-                    close();
-                    setActiveIndex(index)
-                  }
-                }
+                onClick={ () => setActiveIndex(index) }
               >
                 <div className='app__point-link' />
-                <a href={ '#' + elt }>{ elt }</a>
+                <a href={ `/#${ elt }` }>{ elt }</a>
               </li>
             ))
           }
         </ul>      
         <div className="app__nav-favourites">
-          <button onClick={ onSeeResto } type="button">Resto</button>
-          <button onClick={ onSeeFavorites } type="button">Favourites</button>
+          <Link to="SearchBar">
+            <button type="button">Resto</button>
+          </Link>
+          <Link to="Favourites">
+            <button type="button">Favourites</button>
+          </Link>
         </div>
         <div className="app__nav-phone">
           { !smallNav && <GiHamburgerMenu 
@@ -57,12 +58,11 @@ const Navbar = ({ onSeeResto, onSeeFavorites, close }) => {
                 ['Home', 'About', 'Menu', 'Awards', 'Contact'].map(elt => (
                   <li 
                     key={ elt } 
-                    className='p_opensans' 
-                    onClick={ close }
+                    className='p_opensans'
                   >
                     <a
                       onClick={ () => setSmallNav(false) } 
-                      href={ '#' + elt }>{ elt }
+                      href={ `/#${ elt }` }>{ elt }
                     </a>
                   </li>
                 ))

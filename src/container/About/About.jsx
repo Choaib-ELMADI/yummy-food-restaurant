@@ -12,7 +12,7 @@ const About = () => {
         <div className="video-overlay">
           <button onClick="">||</button>
         </div>
-        <video  muted loop autoplay>
+        <video  muted loop autoPlay>
           <source src={ images.video__1 } type="video/mp4" />
         </video>
       </div>
