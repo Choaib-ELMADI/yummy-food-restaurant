@@ -7,9 +7,9 @@ import './Navbar.css';
 
 
 const Navbar = ({ onSeeResto, onSeeFavorites, close }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
   const [smallNav, setSmallNav] = useState(false);
 
-  const className="p_opensans";
 
   return (
     <nav className='app__navigation'>
@@ -18,12 +18,13 @@ const Navbar = ({ onSeeResto, onSeeFavorites, close }) => {
         </div>
         <ul className='app__nav-links'>
           {
-            ['Home', 'About', 'Menu', 'Awards', 'Contact'].map(elt => (
+            ['Home', 'About', 'Menu', 'Awards', 'Contact'].map((elt, index) => (
               <li 
                 key={ elt }
-                className={ className }
+                className={ (activeIndex === index) ? "p_opensans active" : "p_opensans" }
                 onClick={ () => {
                     close();
+                    setActiveIndex(index)
                   }
                 }
               >

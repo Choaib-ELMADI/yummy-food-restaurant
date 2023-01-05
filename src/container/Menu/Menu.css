@@ -3,6 +3,105 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.app__menu-left {
+    display: flex;
+    gap: 15px;
+}
+
+.app__menu-item {
+    position: relative;
+    width: 190px;
+    padding: 0 10px 20px 10px;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0) 70%);
+    backdrop-filter: blur(50px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 30px;
+}
+
+.app__menu-item-img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.app__menu-item-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.app__menu-item button {
+    cursor: pointer;
+    position: absolute;
+    bottom: -16px;
+    right: 8px;
+    background: black;
+    color: var(--white);
+    font-size: 24px;
+    padding: 8px;
+    outline: none;
+    border: 0;
+    border-radius: 8px 8px 20px 8px;
+}
+
+.app__menu-item-info {
+    display: flex;
+    justify-content: space-evenly;
     align-items: flex-start;
+}
+
+.app__menu-item-name {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.app__menu-item-name h5,
+.app__menu-item-name small,
+.app__menu-item-name h4 {
+    font-family: system-ui;
+}
+
+.app__menu-item-name h4 {
+    color: black;
+}
+.app__menu-item-name small {
+    color: #1e1c1c;
+}
+.app__menu-item-name {
+    color: black;
+}
+
+.app__menu-item-fav {
+    margin-top: 4px;
+    padding: 4px;
+    background: #404040;
+    border-radius: 50%;
+}
+
+.app__menu-heart {
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    color: black;
+}
+
+.app__menu-right {
+    max-width: 600px;
+}
+
+.app__menu-right h1,
+.app__menu-right p {
+    color: rgba(255, 255, 255, 0.3);
+    font-family: system-ui;
+}
+
+.app__menu-right p {
+    width: 60%;
+    margin-top: 2rem;
 }

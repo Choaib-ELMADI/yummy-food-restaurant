@@ -11,7 +11,8 @@
     --orange:       #F17C12;
     --dark__orange: #F54E29;
     --dark__red:    orangered;
-    --mainF:        'Arima';
+    --mainA:        'Arima';
+    --mainB:        'system-ui';
     --handW-1:      'Gochi Hand';
 }
 
@@ -28,7 +29,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--mainF);
+    font-family: var(--mainB);
     scroll-behavior: smooth;
 }
 

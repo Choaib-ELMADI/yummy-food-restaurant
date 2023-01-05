@@ -9,35 +9,32 @@ import './Item.css';
 
 
 const Item = ({ item, FavoratesList }) => {
-    const [heart, setHeart] = useState(false);
+    const [heart, setHeart] = useState(true);
 
-    useEffect(() => {
-        const addToFav = localStorage.getItem(`${ item.name }-${ item.id }`);
-        if (addToFav !== null) setHeart(addToFav);
-    }, [])
 
-    // useEffect(() => {
-    //     localStorage.setItem(`${ item.name }-${ item.id }`, !heart);
-    // }, [heart]);
-    
-    const handleHeartClick = (item) => {
-        const addToFav = localStorage.getItem(`${ item.name }-${ item.id }`);
-        if (addToFav !== null) setHeart(!heart);
+    const handleHeartClick = () => {
+        !heart ? 
+            toast.error(`${ item.name } removed from favourites.`) : 
+            toast.success(`${ item.name } added to favourites.`);
         
-        FavoratesList(item);
-        { heart && toast.success(`${ item.name } added to favourites.`);}
-        { !heart && toast.error(`${ item.name } removed from favourites.`);}
-    }
+        setHeart(!heart);
 
+        localStorage.setItem(`${ item.name }-${ item.id }`, heart);
+        FavoratesList(item);
+    }
 
 
     return (
         <div className='menu__item'>
             <div className='img__container'>
-                <button className='heart' onClick={ () => handleHeartClick(item) }>
+                <button className='heart' onClick={ () => {
+                        handleHeartClick()
+                     } 
+                    }>
                     {
-                        heart ? <AiFillHeart key={ item.name } className='fill__heart' /> :
-                        <AiOutlineHeart key={ item.name } className='outline__heart' />
+                        !localStorage.getItem(`${ item.name }-${ item.id }`) ? 
+                            <AiFillHeart key={ item.name } /> :
+                            <AiOutlineHeart key={ item.name } />
                     }
                 </button>
                 <div className="overlay" />

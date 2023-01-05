@@ -8,6 +8,7 @@ import bastilla__3 from '../assets/bastilla__3.jpg';
 import bastilla__4 from '../assets/bastilla__4.jpg';
 
 import bread__1    from '../assets/bread__1.jpg';
+import video__1    from '../assets/morocco__spices.mp4';
 
 import candy__1    from '../assets/candy__1.jpeg';
 import candy__2    from '../assets/candy__2.jpg';
@@ -21,6 +22,8 @@ import candy__9    from '../assets/candy__9.jpg';
 import candy__10   from '../assets/candy__10.jpg';
 
 import chef        from '../assets/chef.jpg';
+
+import print       from '../assets/finger__print.jpg';
 
 import couscous__1 from '../assets/couscous__1.jpeg';
 import couscous__2 from '../assets/couscous__2.jpeg';
@@ -61,6 +64,7 @@ export default {
   bastilla__4,
 
   bread__1,
+  video__1,
 
   candy__1,
   candy__2,
@@ -74,6 +78,8 @@ export default {
   candy__10,
 
   chef,
+
+  print,
 
   couscous__1,
   couscous__2,

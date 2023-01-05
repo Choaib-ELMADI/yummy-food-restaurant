@@ -13,8 +13,8 @@ const Favorite = ({ fav, setFavorites, favorites }) => {
             <div className="app__fav-imgs">
                 <div className='app__fav-img'>
                     <img 
-                        src={ fav.img[index] } 
-                        alt={ fav.name } 
+                        src={ fav.img[index] }
+                        alt={ fav.name }
                     />
                 </div>
                 <div className="app__fav-small-imgs">
@@ -23,7 +23,8 @@ const Favorite = ({ fav, setFavorites, favorites }) => {
                     <img 
                         onPointerEnter={ () => setIndex(index) }
                         key={ pic } 
-                        src={ fav.img[index] } 
+                        src={ fav.img[index] }
+                        slt={ fav.name }
                         className='app__fav-small-img' 
                     />
                     ))
