@@ -58,14 +58,12 @@
 }
 
 .app__header-info h1 {
-    font-family: system-ui;
     color: black;
     font-size: 36px;
     margin-bottom: 3rem;
 }
 
 .app__header-info a {
-    font-family: system-ui;
     text-decoration: none;
     padding: .5rem 1.5rem;
     font-size: 18px;

@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Arima:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
-
 :root {
     --dark:         #070606;
     --dark__blue:   #001632;
@@ -11,9 +8,7 @@
     --orange:       #F17C12;
     --dark__orange: #F54E29;
     --dark__red:    orangered;
-    --mainA:        'Arima';
-    --mainB:        'system-ui';
-    --handW-1:      'Gochi Hand';
+    --mainA:        'system-ui';
 }
 
 #root {
@@ -29,7 +24,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--mainB);
+    font-family: var(--mainA);
     scroll-behavior: smooth;
 }
 

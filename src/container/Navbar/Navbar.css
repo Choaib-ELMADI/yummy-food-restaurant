@@ -14,9 +14,9 @@
     display: flex;
     justify-content: flex-start;
     font-size: 26px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-family: var(--handW-1);
+    font-weight: 700;
+    letter-spacing: -2px;
+    font-family: var(--mainB);
 }
 
 .app__nav-links {
@@ -81,7 +81,7 @@
 
 .app__nav-favourites button {
     position: relative;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--dark__red);
     background: transparent;
@@ -96,7 +96,7 @@
     left: 0;
     bottom: 0;
     width: 0;
-    height: 1.5px;
+    height: 2px;
     background-color: var(--dark__red);
     transform-origin: left;
     transition: width 0.3s ease-in-out;
@@ -106,13 +106,13 @@
     width: 100%;
 }
 
-@media screen and (min-width: 876px) {
+@media screen and (width >= 876px) {
     .app__nav-phone {
         display: none;
     }
 }
 
-@media screen and (max-width: 876px) {
+@media screen and (width <= 876px) {
     .app__navigation {
         padding: 0.5rem 1rem;
     }
@@ -171,17 +171,16 @@
     .app__small-nav-links .p_opensans a::before,
     .app__small-nav-links .p_opensans a::after {
         position: absolute;
-        top: 20px;
+        bottom: 8px;
         content: '';
-        width: 55px;
-        transform: scale(0, 1);
+        width: 0;
         height: 2px;
         background: var(--orange);
         transition: all .3s ease-in-out;
     }
 
     .app__small-nav-links .p_opensans a::before {
-        transform-origin: right;
+        transform-origin: left;
         left: -60px;
     }
 
@@ -196,6 +195,6 @@
 
     .app__small-nav-links .p_opensans a:hover::before,
     .app__small-nav-links .p_opensans a:hover::after {
-        transform: scale(1, 1);
+        width: 55px;
     }
 }
