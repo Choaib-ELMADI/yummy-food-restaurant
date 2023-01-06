@@ -15,8 +15,9 @@
     justify-content: flex-start;
     font-size: 26px;
     font-weight: 700;
+    color: var(--white);
     letter-spacing: -2px;
-    font-family: var(--mainB);
+    font-family: var(--mainA);
 }
 
 .app__nav-links {
@@ -79,31 +80,20 @@
     gap: .75rem;
 }
 
+.app__nav-favourites button.active {
+    border-bottom: 2px solid var(--dark__red);
+    color: var(--dark__red);
+}
+
 .app__nav-favourites button {
     position: relative;
     font-size: 20px;
     font-weight: 600;
-    color: var(--dark__red);
+    color: var(--gris);
     background: transparent;
     border: 0;
     outline: none;
     cursor: pointer;
-}
-
-.app__nav-favourites button::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--dark__red);
-    transform-origin: left;
-    transition: width 0.3s ease-in-out;
-}
-
-.app__nav-favourites button:hover::after {
-    width: 100%;
 }
 
 @media screen and (width >= 876px) {
@@ -115,6 +105,8 @@
 @media screen and (width <= 876px) {
     .app__navigation {
         padding: 0.5rem 1rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
     .app__nav-logo {
@@ -127,6 +119,7 @@
     }
 
     .open__overlay {
+        transform: translateY(4px);
         display: grid;
         place-items: center;
         cursor: pointer;
@@ -151,7 +144,7 @@
     .overlay__close {
         cursor: pointer;
         position: absolute;
-        top: .5rem;
+        top: 1rem;
         right: 1rem;
     }
 
@@ -189,12 +182,12 @@
         right: -60px;
     }
 
-    .app__small-nav-links .p_opensans a:hover {
+    .app__small-nav-links .p_opensans.active a {
         font-size: 45px;
     }
 
-    .app__small-nav-links .p_opensans a:hover::before,
-    .app__small-nav-links .p_opensans a:hover::after {
+    .app__small-nav-links .p_opensans.active a::before,
+    .app__small-nav-links .p_opensans.active a::after {
         width: 55px;
     }
 }

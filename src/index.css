@@ -30,6 +30,7 @@
 
 .app {
     width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -42,5 +43,14 @@
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }

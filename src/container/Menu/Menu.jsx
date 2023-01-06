@@ -4,12 +4,13 @@ import { ImCart } from 'react-icons/im';
 
 import './Menu.css';
 import { images } from '../../constants/index';
+// import
+
 
 
 
 const Menu = () => {
   const [heart, setHeart] = useState(false);
-
 
   return (
     <div id='Menu' className='app__menu'>
@@ -30,7 +31,7 @@ const Menu = () => {
       <div className="app__menu-left">
 
         <div className="app__menu-item">
-          <button><ImCart className='heart-cart' fontSize={ 22 } /></button>
+          <button ><ImCart className='heart-cart' fontSize={ 22 } /></button>
           <div className="app__menu-item-img">
             <img src={ images.tajine__8 } alt='order' />
           </div>
@@ -49,7 +50,7 @@ const Menu = () => {
         </div>
 
         <div className="app__menu-item">
-          <button><ImCart className='heart-cart' fontSize={ 22 } /></button>
+          <button ><ImCart className='heart-cart' fontSize={ 22 } /></button>
           <div className="app__menu-item-img">
             <img src={ images.tajine__6 } alt='order' />
           </div>

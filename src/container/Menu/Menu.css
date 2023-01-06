@@ -1,6 +1,6 @@
 .app__menu {
     width: 100%;
-    height: 100vh;
+    padding: 4rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -10,7 +10,7 @@
 
 .app__menu-left {
     display: flex;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
 .app__menu-item {

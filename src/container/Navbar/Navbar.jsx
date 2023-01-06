@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { MdOutlineRestaurantMenu } from 'react-icons/md';
+import { BsMenuButtonWide } from 'react-icons/bs';
+import { MdOutlineRestaurant } from 'react-icons/md';
 
 import './Navbar.css';
 
@@ -9,6 +9,8 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [activeSmallIndex, setActiveSmallIndex] = useState(0);
+  const [activeFav, setActiveFav] = useState(null);
   const [smallNav, setSmallNav] = useState(false);
 
 
@@ -33,35 +35,52 @@ const Navbar = () => {
         </ul>      
         <div className="app__nav-favourites">
           <Link to="SearchBar">
-            <button type="button">Resto</button>
+            <button 
+              onClick={ () => setActiveFav(1) } 
+              className={ (activeFav === 1) ? 'active' : '' } 
+              type="button"
+            >
+              Resto
+            </button>
           </Link>
           <Link to="Favourites">
-            <button type="button">Favourites</button>
+            <button 
+              onClick={ () => setActiveFav(2) } 
+              className={ (activeFav === 2) ? 'active' : '' } 
+              type="button"
+            >
+              Favourites
+            </button>
           </Link>
         </div>
         <div className="app__nav-phone">
-          { !smallNav && <GiHamburgerMenu 
-            fontSize={ 26 } 
-            onClick={ () => setSmallNav(!smallNav) } 
-            className='open__overlay'
-          /> }
+          { !smallNav && 
+            <BsMenuButtonWide 
+              fontSize={ 24 } 
+              onClick={ () => setSmallNav(!smallNav) } 
+              className='open__overlay'
+            /> 
+          }
           {
             smallNav &&
             <div className='app__small-nav-overlay'>
-              <MdOutlineRestaurantMenu 
-                fontSize={ 26 } 
+              <MdOutlineRestaurant
+                fontSize={ 28 } 
                 onClick={ () => setSmallNav(!smallNav) } 
                 className='overlay__close' 
               />
               <ul className='app__small-nav-links'>
               {
-                ['Home', 'About', 'Menu', 'Awards', 'Contact'].map(elt => (
+                ['Home', 'About', 'Menu', 'Awards', 'Contact'].map((elt, index) => (
                   <li 
                     key={ elt } 
-                    className='p_opensans'
+                    className= { (activeSmallIndex === index) ? 'p_opensans active' : 'p_opensans' }
                   >
                     <a
-                      onClick={ () => setSmallNav(false) } 
+                      onClick={ () => { 
+                        setSmallNav(false) 
+                        setActiveSmallIndex(index);
+                      } } 
                       href={ `/#${ elt }` }>{ elt }
                     </a>
                   </li>

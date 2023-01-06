@@ -1,15 +1,15 @@
 .app__about {
-    padding-top: 60px;
     width: 90%;
     margin: auto;
     min-height: 100vh;
     display: flex;
+    gap: 4rem;
     justify-content: center;
     align-items: center;
 }
 
 .app__about-left {
-    width: 50%;
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,6 +19,7 @@
     position: relative;
     width: 500px;
     height: 300px;
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -66,7 +67,7 @@
 }
 
 .app__about-right {
-    width: 50%;
+    width: 500px;
 }
 
 .app__about-right h1 {
@@ -129,6 +130,7 @@
 
 @media screen and (width <= 950px) {
     .app__about {
+        padding-bottom: 60px;
         flex-direction: column;
         gap: 3rem;
     }
