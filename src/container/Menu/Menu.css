@@ -1,11 +1,11 @@
 .app__menu {
-    padding-top: 60px;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    gap: 2rem;
 }
 
 .app__menu-left {
@@ -17,7 +17,7 @@
     position: relative;
     width: 190px;
     padding: 0 10px 20px 10px;
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0) 70%);
+    background-image: linear-gradient(to top, var(--soft__blue), rgba(0, 0, 0, 0) 70%);
     backdrop-filter: blur(50px);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 30px;
@@ -40,9 +40,8 @@
     position: absolute;
     bottom: -16px;
     right: 8px;
-    background: black;
+    background: var(--black);
     color: var(--white);
-    font-size: 24px;
     padding: 8px;
     outline: none;
     border: 0;
@@ -51,8 +50,9 @@
 
 .app__menu-item-info {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
+    padding: 0 10px;
 }
 
 .app__menu-item-name {
@@ -61,20 +61,14 @@
     gap: .5rem;
 }
 
-.app__menu-item-name h5,
-.app__menu-item-name small,
 .app__menu-item-name h4 {
-    font-family: system-ui;
-}
-
-.app__menu-item-name h4 {
-    color: black;
+    color: var(--black);
 }
 .app__menu-item-name small {
-    color: #1e1c1c;
+    color: var(--gris);
 }
-.app__menu-item-name {
-    color: black;
+.app__menu-item-name h5 {
+    color: var(--dark__red);
 }
 
 .app__menu-item-fav {
@@ -89,7 +83,7 @@
     display: grid;
     place-items: center;
     font-size: 18px;
-    color: black;
+    color: var(--dark__red);
 }
 
 .app__menu-right {
@@ -97,18 +91,53 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    background: red;
+    align-items: center;
+}
+
+.app__menu-right h1 {
+    color: var(--white);
 
 }
 
-.app__menu-right h1,
-.app__menu-right p {
-    color: rgba(255, 255, 255, 0.3);
-    font-family: system-ui;
+.app__menu-right h1 span {
+    color: var(--dark__red);
 }
 
 .app__menu-right p {
-    width: 60%;
+    width: 80%;
     margin-top: 2rem;
+    color: var(--white);
+    text-align: justify;
+}
+
+
+@media screen and (width <= 520px) {
+    .app__menu-item {
+        width: 140px;
+        padding: 0 0 10px 0;
+    }
+
+    .app__menu-item-img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .app__menu-item button .heart-cart {
+        font-size: 18px;
+    }
+
+    .app__menu-right {
+        width: 90%;
+        margin: auto;
+    }
+
+    .app__menu-right h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .app__menu-right p {
+        text-align: justify;
+        width: 100%;
+    }
 }

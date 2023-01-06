@@ -1,12 +1,12 @@
 :root {
     --dark:         #070606;
+    --black:        black;
     --dark__blue:   #001632;
     --soft__blue:   #1A5175;
-    --soft__yellow: #F4F1C9;
     --white:        #e4e4e4;
     --brown:        #605249;
+    --gris:         rgba(255, 255, 255, 0.3);
     --orange:       #F17C12;
-    --dark__orange: #F54E29;
     --dark__red:    orangered;
     --mainA:        'system-ui';
 }
@@ -30,7 +30,6 @@
 
 .app {
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
