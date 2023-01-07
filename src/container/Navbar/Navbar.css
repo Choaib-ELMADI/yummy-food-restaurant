@@ -80,6 +80,10 @@
     gap: .75rem;
 }
 
+.app__nav-favourites button:hover {
+    color: var(--orange);
+}
+
 .app__nav-favourites button.active {
     border-bottom: 2px solid var(--dark__red);
     color: var(--dark__red);
