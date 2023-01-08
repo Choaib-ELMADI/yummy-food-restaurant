@@ -1,6 +1,7 @@
 .app__menu {
+    position: relative;
     width: 100%;
-    padding: 6rem 0 4rem 0;
+    padding: 8rem 0 4rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
