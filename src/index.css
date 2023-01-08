@@ -29,6 +29,7 @@
 }
 
 .app {
+    /* padding-top: 1rem; */
     width: 100%;
     min-height: 100vh;
     display: flex;

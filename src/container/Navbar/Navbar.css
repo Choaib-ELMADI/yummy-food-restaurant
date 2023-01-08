@@ -1,13 +1,26 @@
 .app__navigation {
     position: fixed;
-    top: 0;
+    top: .5rem;
     background: var(--dark);
     z-index: 999;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+}
+
+.app__navigation::before {
+    position: absolute;
+    content: '';
+    top: -.5rem;
+    left: -5%;
+    width: 110%;
+    margin: auto;
+    height: .5rem;
+    backdrop-filter: blur(10px);
 }
 
 .app__nav-logo {
@@ -107,8 +120,15 @@
 }
 
 @media screen and (width <= 876px) {
+    .app__navigation::before {
+        display: none;
+    }
+
     .app__navigation {
+        width: 100%;
+        top: 0;
         padding: 0.5rem 1rem;
+        border-radius: 0;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }

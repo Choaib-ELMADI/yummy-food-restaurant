@@ -1,6 +1,6 @@
 .app__menu {
     width: 100%;
-    padding: 4rem 0;
+    padding: 6rem 0 4rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -110,6 +110,11 @@
     text-align: justify;
 }
 
+@media screen and (width <= 876px) {
+    .app__menu {
+        padding: 4rem 0;
+    }
+}
 
 @media screen and (width <= 520px) {
     .app__menu-item {

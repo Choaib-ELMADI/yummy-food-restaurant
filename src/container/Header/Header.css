@@ -3,13 +3,13 @@
     width: 90%;
     margin: auto;
     height: 98vh;
+    margin-top: 1rem;
     padding-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.4), rgba(25, 255, 255, 0));
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
