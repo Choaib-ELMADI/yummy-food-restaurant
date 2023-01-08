@@ -12,7 +12,7 @@ const About = () => {
   const vidRef = useRef(null);
 
   const handlePlayVideo = () => {
-    if (pause) vidRef.current.pause();
+    if (!pause) vidRef.current.pause();
     else vidRef.current.play();
   }
 
@@ -26,7 +26,7 @@ const About = () => {
               setPause(!pause);
             }}
             >
-              { !pause ? <BsPauseCircleFill /> : <BsFillPlayCircleFill /> }
+              { pause ? <BsPauseCircleFill /> : <BsFillPlayCircleFill /> }
             </button>
           </div>
           <video ref={ vidRef }  muted loop autoPlay>
