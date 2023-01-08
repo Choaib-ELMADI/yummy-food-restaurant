@@ -36,15 +36,13 @@ const About = () => {
         <h1>Travel To <span>Morocco</span>, The Land of Spices.</h1>
       </div>
       <div className="app__about-right">
-        <h1><span>We </span>Create the best foody product</h1>
+        <h1><span>We </span>Create the best food product</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           Dolores deleniti nihil dolore sed illo quo, 
           amet corporis pariatur temporibus tempore voluptate 
           rem nobis, obcaecati et? Vitae tempore consequatur
-          voluptates vel voluptate beatae dolorem libero quod
-          corrupti unde consequuntur dolor iure in, voluptas ut
-          sapiente accusantium dicta? Reprehenderit autem at distinctio!
+          voluptates vel voluptate beatae dolorem!
         </p>
         <ul className='app__about-list'>
           <li><BsCheckLg className='check' /> Lorem ipsum dolor sit amet consectetur elit.</li>
