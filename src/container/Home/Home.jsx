@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Header, About, Gallery, Menu, FindUs, Footer } from '../index';
+import Wrapper from '../../wrapper/Wrapper';
 
 
 
@@ -17,4 +18,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default Wrapper(Home);
