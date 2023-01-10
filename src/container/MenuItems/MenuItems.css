@@ -1,7 +1,16 @@
 .menu__items {
     margin: 25px 40px 40px 40px;
     display: flex;
+    gap: 1rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+@media screen and (width <= 800px) {
+    .menu__items {
+        width: 90%;
+    }
 }

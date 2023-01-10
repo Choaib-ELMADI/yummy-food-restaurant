@@ -14,10 +14,7 @@ const Menu = () => {
   const [showSideItem, setShowSideItem] = useState(false);
   const [pickedItem, setpickedItem] = useState(null);
 
-  
-  const R1 = Math.floor(Math.random() * 5);
-  const R2 = Math.floor(Math.random() * 5);
-  
+  var R1 = 3, R2 = 1;  
 
   const addToFav = (x) => {
     const nextHeart = heart.map((item, i) => {
@@ -68,7 +65,7 @@ const Menu = () => {
             />
           </button>
           <div className="app__menu-item-img">
-            <img src={ foods[R1].img[0] } alt='order' />
+            <img src={ foods[R1].img[2] } alt='order' />
           </div>
           <div className="app__menu-item-info">
             <div className="app__menu-item-name">
@@ -98,7 +95,7 @@ const Menu = () => {
             />
           </button>
           <div className="app__menu-item-img">
-            <img src={ foods[R2].img[0] } alt='order' />
+            <img src={ foods[R2].img[3] } alt='order' />
           </div>
           <div className="app__menu-item-info">
             <div className="app__menu-item-name">

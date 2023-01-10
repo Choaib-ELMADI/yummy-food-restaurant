@@ -11,6 +11,8 @@
 
 .app__menu-left {
     display: flex;
+    flex: .5;
+    justify-content: space-evenly;
     gap: 1.5rem;
 }
 
@@ -108,7 +110,6 @@
     width: 80%;
     margin-top: 2rem;
     color: var(--white);
-    text-align: justify;
 }
 
 @media screen and (width <= 876px) {
@@ -117,7 +118,7 @@
     }
 }
 
-@media screen and (width <= 520px) {
+@media screen and (width <= 600px) {
     .app__menu-item {
         width: 140px;
         padding: 0 0 10px 0;
@@ -143,7 +144,6 @@
     }
 
     .app__menu-right p {
-        text-align: justify;
         width: 100%;
     }
 }
