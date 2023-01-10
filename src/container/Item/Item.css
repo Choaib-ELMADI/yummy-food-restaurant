@@ -33,49 +33,69 @@
 .img__container:hover .overlay {
     background: rgba(0, 0, 0, 0.9);
 }
+.plat__info h1 {
+    text-transform: capitalize;
+    color: var(--white);
+}
+.plat__info p {
+    color: var(--dark__red);
+    --lineH: 20px;
+    line-height: var(--lineH);
+    height: calc( 2 * var(--lineH));
+    overflow: hidden;
+}
+.plat__info b {
+    color: var(--gris);
+}
 
 .btns {
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: flex-start;
     gap: 5px;
 }
 .btns .btn {
-    display: grid;
-    place-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    color: #e4e4e4;
-    background: orangered;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    padding: 8px;
+    background: var(--soft__blue);
+    color: var(--white);
     border: 0;
     outline: none;
+    transition: all .2s;
 }
 .btns .btn span {
-    font-weight: 800;
-    display: none;
-    opacity: 0;
+    font-size: 0;
 }
 .btns .btn:hover span {
-    display: initial;
-    opacity: 1;
+    font-size: 18px;
+    font-weight: 600;
 }
 .btns .btn .icon {
-    color: #e4e4e4;
     font-size: 20px;
 }
 .btns .btn:hover {
-    width: 100px;
-    color: orangered;
-    background: #e4e4e4;
-    transition: 0.1s;
-    font-size: 16px;
+    width: max-content;
+    border-radius: 15px;
+    background: #212230;
 }
 .btns .btn:hover .icon {
-    color: orangered;
     font-size: 0;
+}
+
+.btns h2 {
+    margin-left: auto;
+    font-size: 20px;
+    color: var(--white);
+}
+.btns h2::first-letter {
+    color: var(--dark__red);
 }
 
 .heart {

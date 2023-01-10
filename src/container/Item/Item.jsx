@@ -18,8 +18,6 @@ const Item = ({ item, FavoratesList }) => {
             toast.success(`${ item.name } added to favourites.`);
         
         setHeart(!heart);
-
-        localStorage.setItem(`${ item.name }-${ item.id }`, heart);
         FavoratesList(item);
     }
 
@@ -27,14 +25,16 @@ const Item = ({ item, FavoratesList }) => {
     return (
         <div className='menu__item'>
             <div className='img__container'>
-                <button className='heart' onClick={ () => {
+                <button 
+                    className='heart' 
+                    onClick={ () => {
                         handleHeartClick()
-                     } 
-                    }>
+                    }}
+                >
                     {
-                        !localStorage.getItem(`${ item.name }-${ item.id }`) ? 
-                            <AiFillHeart key={ item.name } /> :
-                            <AiOutlineHeart key={ item.name } />
+                        !heart ? 
+                        <AiFillHeart key={ item.name } /> :
+                        <AiOutlineHeart key={ item.name } />
                     }
                 </button>
                 <div className="overlay" />
@@ -60,6 +60,7 @@ const Item = ({ item, FavoratesList }) => {
                     <RiMoneyPoundCircleFill className='icon' />
                     <span>Buy Now</span>
                 </button>
+                <h2>{ item.price }</h2>
             </div>
         </div>
     );
