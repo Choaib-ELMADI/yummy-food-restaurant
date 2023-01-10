@@ -16,12 +16,12 @@ const Navbar = () => {
 
   return (
     <nav className='app__navigation'>
-        <div className="app__nav-logo">
+        <a href="/" className="app__nav-logo">
           YummyFood
-        </div>
+        </a>
         <ul className='app__nav-links'>
           {
-            ['Home', 'About', 'Menu', 'Awards', 'Contact'].map((elt, index) => (
+            ['Home', 'About', 'Menu', 'Gallery', 'Contact'].map((elt, index) => (
               <li 
                 key={ elt }
                 className={ (activeIndex === index) ? "p_opensans active" : "p_opensans" }
@@ -36,7 +36,11 @@ const Navbar = () => {
         <div className="app__nav-favourites">
           <Link to="SearchBar">
             <button 
-              onClick={ () => setActiveFav(1) } 
+              onClick={ () => {
+                setActiveIndex(null);
+                setActiveSmallIndex(null);
+                setActiveFav(1);
+              }} 
               className={ (activeFav === 1) ? 'active' : '' } 
               type="button"
             >
@@ -45,7 +49,11 @@ const Navbar = () => {
           </Link>
           <Link to="Favourites">
             <button 
-              onClick={ () => setActiveFav(2) } 
+              onClick={ () => {
+                setActiveIndex(null);
+                setActiveSmallIndex(null);
+                setActiveFav(2);
+              }}  
               className={ (activeFav === 2) ? 'active' : '' } 
               type="button"
             >
@@ -71,7 +79,7 @@ const Navbar = () => {
               />
               <ul className='app__small-nav-links'>
               {
-                ['Home', 'About', 'Menu', 'Awards', 'Contact'].map((elt, index) => (
+                ['Home', 'About', 'Menu', 'Gallery', 'Contact'].map((elt, index) => (
                   <li 
                     key={ elt } 
                     className= { (activeSmallIndex === index) ? 'p_opensans active' : 'p_opensans' }
