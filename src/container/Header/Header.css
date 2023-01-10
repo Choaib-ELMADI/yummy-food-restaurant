@@ -82,7 +82,7 @@
 
 .app__header-banner {
     display: flex;
-    gap: 5px;
+    gap: .5rem;
     width: 600px;
     aspect-ratio: 1.5;
     border-radius: 20px;
@@ -95,6 +95,15 @@
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+}
+
+.app__header-banner .app__header-item-info h1 {
+    color: var(--white);
+    font-size: 26px;
+}
+
+.app__header-banner .app__header-item-info p {
+    color: var(--gris);
 }
 
 .app__header-banner  .app__header-item img {
