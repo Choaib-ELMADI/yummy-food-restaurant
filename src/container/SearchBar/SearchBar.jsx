@@ -14,6 +14,7 @@ const SearchBar = ({ FavoratesList }) => {
     <div className='container'>
       <div className='search'>
         <input
+          type='search'
           className='search__input'
           placeholder='Search Plat ...'
           value={ query }
