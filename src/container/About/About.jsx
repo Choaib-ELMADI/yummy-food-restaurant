@@ -45,9 +45,9 @@ const About = () => {
           voluptates vel voluptate beatae dolorem!
         </p>
         <ul className='app__about-list'>
-          <li><BsCheckLg className='check' /> Lorem ipsum dolor sit amet consectetur elit.</li>
-          <li><BsCheckLg className='check' /> Lorem ipsum dolor sit amet consectetur.</li>
-          <li><BsCheckLg className='check' /> Lorem ipsum dolor, amet consectetur adipisicing elit.</li>
+          <li><BsCheckLg className='check' /> Lorem ipsum dolor sit amet elit.</li>
+          <li><BsCheckLg className='check' /> Lorem dolor sit amet consectetur.</li>
+          <li><BsCheckLg className='check' /> Lorem ipsum dolor, amet consectetur elit.</li>
         </ul>
         <Link to="SearchBar" className='app__about-more'>
           <button>See More</button>
