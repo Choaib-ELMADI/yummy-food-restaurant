@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
+import { BsStarFill, BsStarHalf } from 'react-icons/bs';
 
 import './Header.css';
 import { images } from '../../constants/index';
@@ -28,7 +29,14 @@ const Header = () => {
               <div className='overlay' />
               <div className='app__header-item-info'>
                 <h1>The Moroccan Harira</h1>
-                <p>A traditional dish</p>
+                <p>A traditional dish.</p>
+                <label className='star-icons'>
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarHalf />
+                </label>
               </div>
               <img src={ images.harira__1 } />
             </div>
@@ -37,7 +45,14 @@ const Header = () => {
               <div className='overlay' />
               <div className='app__header-item-info'>
                 <h1>BM Dish</h1>
-                <p>A very popular dish</p>
+                <p>A very popular dish.</p>
+                <label className='star-icons'>
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                </label>
               </div>
               <img src={ images.tajine__4 } />
             </div>
