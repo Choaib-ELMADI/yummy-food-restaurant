@@ -50,6 +50,8 @@ import secret__1   from '../assets/secret__1.jpeg';
 import secret__2   from '../assets/secret__2.jpeg';
 import secret__3   from '../assets/secret__3.jpeg';
 
+import findus__img from '../assets/findus__img.jpg';
+
 import tajine__1   from '../assets/tajine__1.jpeg';
 import tajine__2   from '../assets/tajine__2.jpeg';
 import tajine__3   from '../assets/tajine__3.jpeg';
@@ -84,6 +86,8 @@ export default {
 
   bread__1,
   video__1,
+
+  findus__img,
 
   candy__1,
   candy__2,

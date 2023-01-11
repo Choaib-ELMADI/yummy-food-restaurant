@@ -5,9 +5,12 @@
 }
 
 .img__container {
+    border-radius: 15px 0 15px 0;
+    overflow: hidden;
     width: 100%;
     aspect-ratio: 1.5;
     position: relative;
+    margin-bottom: .3rem;
 }
 .plat__img {
     width: 100%;
@@ -41,7 +44,7 @@
     color: var(--dark__red);
     --lineH: 20px;
     line-height: var(--lineH);
-    height: calc( 2 * var(--lineH));
+    height: var(--lineH);
     overflow: hidden;
 }
 .plat__info b {

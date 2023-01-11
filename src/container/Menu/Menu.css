@@ -67,9 +67,11 @@
 .app__menu-item-name h4 {
     color: var(--black);
 }
+
 .app__menu-item-name small {
     color: var(--gris);
 }
+
 .app__menu-item-name h5 {
     color: var(--dark__red);
 }
@@ -112,9 +114,13 @@
     color: var(--white);
 }
 
-@media screen and (width <= 876px) {
+@media screen and (width <= 950px) {
     .app__menu {
         padding: 4rem 0;
+    }
+
+    .app__menu-left {
+        flex: 1;
     }
 }
 
