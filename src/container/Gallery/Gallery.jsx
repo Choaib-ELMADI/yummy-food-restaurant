@@ -5,7 +5,21 @@ import { HiArrowLeftCircle, HiArrowRightCircle } from 'react-icons/hi2';
 
 import './Gallery.css';
 import { images } from '../../constants/index';
-const pictures = [ images.candy__2, images.candy__10, images.tajine__3, images.tajine__7, images.bastilla__2, images.bastilla__4, images.bastilla__1 ];
+const pictures = [
+                  images.ouarzazate__2,
+                  images.tea__4, 
+                  images.bastilla__4,
+                  images.tea__5, 
+                  images.tajine__3, 
+                  images.tajine__7, 
+                  images.tajine__10, 
+                  images.bastilla__2, 
+                  images.couscous__6, 
+                  images.background__2,
+                  images.bread__1,
+                  images.rfissa__2,
+                  images.ouarzazate__1 
+                ];
 
 
 
@@ -50,7 +64,7 @@ const Gallery = () => {
             pictures.map((pic, index) => (
               <div 
                 className='pic-container' 
-                key={ 'picture'-index } 
+                key={ index } 
               >
                 <div className='pic-overlay' />
                 <img 
