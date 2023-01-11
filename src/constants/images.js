@@ -30,6 +30,7 @@ import couscous__2 from '../assets/couscous__2.jpeg';
 import couscous__3 from '../assets/couscous__3.jpeg';
 import couscous__4 from '../assets/couscous__4.jpeg';
 import couscous__5 from '../assets/couscous__5.jpeg';
+import couscous__6 from '../assets/couscous__6.jpg';
 
 import logo__1     from '../assets/logo__1.jpeg';
 import logo__2     from '../assets/logo__2.jpeg';
@@ -38,6 +39,12 @@ import logo__3     from '../assets/logo__3.jpg';
 import knife       from '../assets/knife.jpg';
 
 import harira__1   from '../assets/harira__1.jpeg';
+
+import ouarzazate__1   from '../assets/ouarzazate__1.jpg';
+import ouarzazate__2   from '../assets/ouarzazate__2.jpg';
+
+import rfissa__1   from '../assets/rfissa__1.jpg';
+import rfissa__2   from '../assets/rfissa__2.jpg';
 
 import secret__1   from '../assets/secret__1.jpeg';
 import secret__2   from '../assets/secret__2.jpeg';
@@ -52,6 +59,18 @@ import tajine__6   from '../assets/tajine__6.jpeg';
 import tajine__7   from '../assets/tajine__7.jpeg';
 import tajine__8   from '../assets/tajine__8.jpeg';
 import tajine__9   from '../assets/tajine__9.jpeg';
+import tajine__10  from '../assets/tajine__10.jpeg';
+import tajine__11  from '../assets/tajine__11.jpeg';
+
+import tanjia__1   from '../assets/tanjia__1.jpg';
+import tanjia__2   from '../assets/tanjia__2.jpg';
+import tanjia__3   from '../assets/tanjia__3.jpg';
+
+import tea__1      from '../assets/tea__1.jpeg';
+import tea__2      from '../assets/tea__2.jpeg';
+import tea__3      from '../assets/tea__3.jpg';
+import tea__4      from '../assets/tea__4.jpg';
+import tea__5      from '../assets/tea__5.jpg';
 
 export default {
   background__1,
@@ -86,6 +105,7 @@ export default {
   couscous__3,
   couscous__4,
   couscous__5,
+  couscous__6,
 
   logo__1,
   logo__2,
@@ -94,6 +114,12 @@ export default {
   knife,
 
   harira__1,
+
+  ouarzazate__1,
+  ouarzazate__2,
+
+  rfissa__1,
+  rfissa__2,
 
   secret__1,
   secret__2,
@@ -108,4 +134,16 @@ export default {
   tajine__7,
   tajine__8,
   tajine__9,
+  tajine__10,
+  tajine__11,
+
+  tanjia__1,
+  tanjia__2,
+  tanjia__3,
+
+  tea__1,
+  tea__2,
+  tea__3,
+  tea__4,
+  tea__5,
 };
