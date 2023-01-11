@@ -43,8 +43,8 @@ export const foods = [
     },
     {
         id: 4,
-        name: 'Tajine',
-        img: [images.tajine__6, images.tajine__7, images.tajine__8, images.tajine__9, images.tajine__5],
+        name: 'Chicken Tajine',
+        img: [images.tajine__3, images.tajine__5, images.tajine__10, images.tajine__11],
         price: '$20.00',
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, ad! Deserunt vero sapiente ad beatae perferendis.',
         category: 'lunch',
@@ -56,6 +56,45 @@ export const foods = [
         price: '$2.99',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit nam autem voluptas aspernatur mollitia facilis iure similique laborum?',
         category: 'breakfast'
+    },
+    {
+        id: 6,
+        name: 'moroccan rfissa',
+        img: [images.rfissa__1, images.rfissa__2, images.rfissa__1, images.rfissa__2],
+        price: '$5.99',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, magnam!',
+        category: 'lunch',
+    },
+    {
+        id: 7,
+        name: 'moroccan tea',
+        img: [images.tea__1, images.tea__2, images.tea__3, images.tea__4, images.tea__5],
+        price: '$1.00',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus saepe maiores nam!',
+        category: 'All Time',
+    },
+    {
+        id: 8,
+        name: 'Tanjia',
+        img: [images.tanjia__1, images.tanjia__2, images.tanjia__3, images.tanjia__1],
+        price: '$20.00',
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ipsum nobis, at alias, enim, maxime nostrum expedita quaerat ut laborum repellendus rerum quis porro temporibus ea fugiat rem minima in.',
+        category: 'breakfast',
+    },
+    {
+        id: 9,
+        name: 'Morocco Spices',
+        img: [images.secret__3, images.secret__2, images.secret__1, images.secret__3],
+        price: '$5.00',
+        description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum repudiandae consectetur magni nisi voluptatum error!',
+    },
+    {
+        id: 10,
+        name: 'Beef Tajine',
+        img: [images.tajine__1, images.tajine__7, images.tajine__6, images.tajine__9, images.tajine__2],
+        price: '$20.00',
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, ad! Deserunt vero sapiente ad beatae perferendis.',
+        category: 'lunch',
     },
     
 ];
