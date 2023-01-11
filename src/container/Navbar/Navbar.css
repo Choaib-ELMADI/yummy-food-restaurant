@@ -40,6 +40,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: 0.2s;
 }
 
 .p_opensans.active a {
@@ -60,7 +61,6 @@
     background: var(--orange);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease-in-out;
 }
 
 .p_opensans:hover .app__point-link {
@@ -86,11 +86,12 @@
 
 .app__nav-favourites button:hover {
     color: var(--orange);
+    border-color: var(--orange);
 }
 
 .app__nav-favourites button.active {
-    border-bottom: 2px solid var(--dark__red);
     color: var(--dark__red);
+    border-color: var(--dark__red);
 }
 
 .app__nav-favourites button {
@@ -102,6 +103,8 @@
     border: 0;
     outline: none;
     cursor: pointer;
+    border-bottom: 2px solid var(--gris);
+    transition: .2s;
 }
 
 @media screen and (width >= 2000px) {

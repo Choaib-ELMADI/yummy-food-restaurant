@@ -1,11 +1,13 @@
 .container {
-    margin-top: 100px;
+    padding-top: 100px;
     width: 100%;
+    max-width: 2000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    background: var(--dark);
 }
 
 .search {
@@ -31,6 +33,12 @@
 .search__input::placeholder {
     color: orangered;
     font-size: 18px;
+}
+
+@media screen and (width >= 2000px) {
+    .container {
+        padding-top: 120px;
+    }
 }
 
 @media screen and (max-width: 876px) {

@@ -1,11 +1,21 @@
 .app__favorites {
-    margin-top: 100px;
+    position: relative;
+    padding-top: 100px;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    background: var(--dark);
+    max-width: 2000px;
+}
+
+.just-empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    text-align: center;
 }
 
 .empty__fav {
@@ -64,6 +74,7 @@
 }
 
 .app__fav-info h1 {
+    text-transform: capitalize;
     color: var(--white);
 }
 
@@ -95,7 +106,7 @@
     color: var(--dark__red);
 }
 
-@media screen and (width <= 876px) {
+@media screen and (width <= 1000px) {
     .app__fav {
         width: 80%;
     }
@@ -136,9 +147,8 @@
 }
 
 @media screen and (width <= 600px) {
-    .empty__fav + h1 {
-        width: 80%;
+    .just-empty {
+        width: 90%;
         margin: auto;
-        text-align: center;
     }
 }
