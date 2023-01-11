@@ -20,10 +20,10 @@ const SideItem = ({ x, SideOpen }) => {
                 />
                 <div className='app__menu-side-item-info'>
                     <h1>{ foods[x].name }</h1>
-                    <label>
+                    <p>
                         <h4>{ foods[x].price }</h4>
                         <button>Buy</button>
-                    </label>
+                    </p>
                     <div className='app__menu-side-item-wrapper'>
                         <div className='app__menu-side-item-pics'>
                             {
