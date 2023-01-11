@@ -8,6 +8,7 @@ import { Navbar, Home, SearchBar, Favorites } from './container/index';
 
 const App = () => {
   const [favorites, setFavorites] = useState([]);
+  const [hearts, setHearts] = useState([1, 1, 1, 1, 1, 1]);
 
   const AddFavoratesList = (elt) => {
     if (favorites.length < 1) {
@@ -45,6 +46,22 @@ const App = () => {
     }
   }
 
+  const addToHearted = (index) => {
+    const newHearts = hearts.map((hearted, i) => {
+      if (i === index) return !hearted;
+      return hearted;
+    });
+    setHearts(newHearts);
+  }
+
+  const removeHearted = (index) => {
+    const oldHearts = hearts.map((hearted, i) => {
+      if (i === index) return 1;
+      return hearted;
+    })
+    setHearts(oldHearts);
+  }
+
 
 
   return (
@@ -52,8 +69,18 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="SearchBar"  element={ <SearchBar FavoratesList={ AddFavoratesList } /> } />
-          <Route path="Favourites" element={ <Favorites setFavorites={ setFavorites } favorites={ favorites } /> } />
+          <Route path="SearchBar"  
+                element={ <SearchBar 
+                                FavoratesList={ AddFavoratesList } 
+                                addToHearted={ addToHearted } 
+                                hearts={ hearts }
+                        /> } />
+          <Route path="Favourites" 
+                element={ <Favorites 
+                                setFavorites={ setFavorites } 
+                                favorites={ favorites } 
+                                removeHearted={ removeHearted }
+                        /> } />
         </Routes>
         <Toaster />
     </div>
