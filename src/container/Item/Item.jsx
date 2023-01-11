@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import toast from 'react-hot-toast';
 
 import { FaCartPlus } from 'react-icons/fa';
@@ -8,16 +8,13 @@ import './Item.css';
 
 
 
-const Item = ({ item, FavoratesList }) => {
-    const [heart, setHeart] = useState(true);
-
+const Item = ({ item, FavoratesList, index, addToHearted, hearts }) => {
 
     const handleHeartClick = () => {
-        !heart ? 
+        !hearts[index] ? 
             toast.error(`${ item.name } removed from favourites.`) : 
             toast.success(`${ item.name } added to favourites.`);
-        
-        setHeart(!heart);
+        addToHearted(index);
         FavoratesList(item);
     }
 
@@ -32,7 +29,7 @@ const Item = ({ item, FavoratesList }) => {
                     }}
                 >
                     {
-                        !heart ? 
+                        !hearts[index] ? 
                         <AiFillHeart key={ item.name } /> :
                         <AiOutlineHeart key={ item.name } />
                     }
