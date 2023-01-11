@@ -5,12 +5,18 @@ import './MenuItems.css';
 
 
 
-const MenuItems = ({ items, FavoratesList }) => {
+const MenuItems = ({ items, FavoratesList, addToHearted, hearts }) => {
   return (
     <div className='menu__items'>
       {
-        items.map(item => (
-          <Item key={ item.id } item={ item } FavoratesList={ FavoratesList } />
+        items.map((item, index) => (
+          <Item 
+            key={ item.id } 
+            item={ item } 
+            FavoratesList={ FavoratesList } 
+            addToHearted={ addToHearted } 
+            index={ index } 
+            hearts={ hearts } />
         ))
       }
     </div>
