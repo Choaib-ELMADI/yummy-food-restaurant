@@ -6,7 +6,7 @@ import Favorite from './Favorite';
 
 
 
-const Favorites = ({ favorites, setFavorites }) => {
+const Favorites = ({ favorites, setFavorites, removeHearted }) => {
     return (
         <div className='app__favorites'>
             { 
@@ -18,7 +18,12 @@ const Favorites = ({ favorites, setFavorites }) => {
             }
             {
                 favorites.map(fav => (
-                    <Favorite fav={ fav } setFavorites={ setFavorites } favorites={ favorites } />
+                    <Favorite 
+                        fav={ fav } 
+                        setFavorites={ setFavorites } 
+                        favorites={ favorites } 
+                        removeHearted={ removeHearted }
+                    />
                 ))
             }
         </div>

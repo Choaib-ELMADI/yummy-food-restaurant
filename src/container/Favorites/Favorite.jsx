@@ -5,7 +5,7 @@ import './Favorites.css';
 
 
 
-const Favorite = ({ fav, setFavorites, favorites }) => {
+const Favorite = ({ fav, setFavorites, favorites, removeHearted }) => {
     const [index, setIndex] = useState(0);
 
     return (
@@ -39,9 +39,10 @@ const Favorite = ({ fav, setFavorites, favorites }) => {
                     <button 
                         type="button"
                         onClick={ () => {
+                            removeHearted(fav.id);
                             setFavorites(
                                 favorites.filter(favr => favr.id != fav.id)
-                            )
+                            );
                             toast.error(`${ fav.name } removed from favourites.`);
                         }}
                     >
