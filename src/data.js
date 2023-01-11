@@ -44,7 +44,7 @@ export const foods = [
     {
         id: 4,
         name: 'Chicken Tajine',
-        img: [images.tajine__3, images.tajine__5, images.tajine__10, images.tajine__11],
+        img: [images.tajine__10, images.tajine__5, images.tajine__10, images.tajine__11],
         price: '$20.00',
         description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, ad! Deserunt vero sapiente ad beatae perferendis.',
         category: 'lunch',

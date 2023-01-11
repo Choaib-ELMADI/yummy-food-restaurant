@@ -8,7 +8,7 @@ import { Navbar, Home, SearchBar, Favorites } from './container/index';
 
 const App = () => {
   const [favorites, setFavorites] = useState([]);
-  const [hearts, setHearts] = useState([1, 1, 1, 1, 1, 1]);
+  const [hearts, setHearts] = useState([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
 
   const AddFavoratesList = (elt) => {
     if (favorites.length < 1) {
