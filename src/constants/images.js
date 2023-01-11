@@ -40,7 +40,7 @@ import knife       from '../assets/knife.jpg';
 
 import harira__1   from '../assets/harira__1.jpeg';
 
-import ouarzazate__1   from '../assets/ouarzazate__1.jpg';
+import ouarzazate__1   from '../assets/ouarzazate.jpg';
 import ouarzazate__2   from '../assets/ouarzazate__2.jpg';
 
 import rfissa__1   from '../assets/rfissa__1.jpg';
@@ -59,8 +59,8 @@ import tajine__6   from '../assets/tajine__6.jpeg';
 import tajine__7   from '../assets/tajine__7.jpeg';
 import tajine__8   from '../assets/tajine__8.jpeg';
 import tajine__9   from '../assets/tajine__9.jpeg';
-import tajine__10  from '../assets/tajine__10.jpeg';
-import tajine__11  from '../assets/tajine__11.jpeg';
+import tajine__10  from '../assets/tajine__10.jpg';
+import tajine__11  from '../assets/tajine__11.jpg';
 
 import tanjia__1   from '../assets/tanjia__1.jpg';
 import tanjia__2   from '../assets/tanjia__2.jpg';
