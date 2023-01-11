@@ -16,7 +16,7 @@ const FindUs = () => {
         <h2>Contact Information</h2>
         <label>
           <GiPositionMarker className='icon' />
-          <h3>40000, Guéliz, Marrakech - Morocco</h3>
+          <h3>40000, Marrakech - Morocco</h3>
         </label>
         <label>
           <BsFillTelephoneFill className='icon' />
